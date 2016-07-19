@@ -14,28 +14,28 @@ components:
 Microsoft Windows users should read the [additional requirements documentation](WINDOWS.mdown)
 ## Install Required Dependencies
 
-- [node.js](http://nodejs.org/download/)
+- Install [node.js](https://nodejs.org/en/download/)
 - [npm](https://www.npmjs.com/): Built-in package manager for node (comes with
   node, but check to be sure you have latest version: `npm install -g npm`)
-- [gulp](http://gulpjs.com/): Javascript task automation (`npm install -g
+- Install [gulp](http://gulpjs.com/): Javascript task automation (`npm install -g
   gulp`)
 - [Slush](http://slushjs.github.io/): Application generation tool (`npm install
   -g slush`) - only needed if you are generating the initial code
-- [Bower](http://bower.io/): A package manager for front-end libraries (`npm
+- Install [Bower](http://bower.io/): A package manager for front-end libraries (`npm
   install -g bower`)
-- [Git](https://git-scm.com/) - Roxy depends on this version control system
-- [Ruby](https://www.ruby-lang.org/en/documentation/installation/) - Roxy
+- Install [Git](https://git-scm.com/) - Roxy depends on this version control system
+- Install [Ruby](https://www.ruby-lang.org/en/documentation/installation/) - Roxy
   depends on Ruby in order to run server configuration scripts
 
 ## Install the generator
 
     npm install -g slush-marklogic-node
 
-If you prefer to use the latest code under development:
+If you prefer to use the latest code under development (don't unless you know what you're doing):
 
     npm install -g git://github.com/marklogic/slush-marklogic-node.git
 
-## Run the generator
+## Run the generator i.e. create your application
 
 Go to the directory where your new project will be created (the parent). Then:
 
@@ -52,8 +52,11 @@ Go to the generated application directory:
 Edit `deploy/build.properties` to set the -port properties to available ports
 (defaults: 8040, 8041) and change other properties. The file itself documents
 many of those properties. Others are described in the [documentation for the
-Roxy deployer](https://github.com/marklogic/roxy). Then run the following Roxy
-commands to configure your local MarkLogic database (typically, depending on
+Roxy deployer](https://github.com/marklogic/roxy). 
+
+## Configure your ML server
+
+Then run the following Roxy commands to configure your local MarkLogic database (typically, depending on
 your configuration, it will create a database, associated forest(s), a REST
 server, an app-user, and a role for that user).
 
